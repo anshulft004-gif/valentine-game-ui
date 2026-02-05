@@ -1,5 +1,3 @@
-# valentine-game-ui
-a fun game style valentine day card 
 # 💘 VALENTINE QUEST — GAME UI EDITION
 A fun, gamified digital experience to ask someone to be your Valentine — designed like a mini video game interface.
 
