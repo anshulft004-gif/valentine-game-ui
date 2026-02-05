@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine Quest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 90%;
+    max-width: 450px;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 40px rgba(0, 150, 255, 0.3);
+    text-align: center;
+}
+button {
+    width: 100%;
+    background: #0070f3;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background: #0059c9;
+}
+.hidden {
+    display: none;
+}
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+h2 {
+    font-size: 22px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Start Screen -->
+    <div id="screen1">
+        <h1>🎮 VALENTINE QUEST</h1>
+        <p>PlayStation UI Edition</p>
+        <button onclick="next(1)">START GAME</button>
+    </div>
+
+    <!-- Level 1 -->
+    <div id="screen2" class="hidden">
+        <h2>LEVEL 1 — MEMORY</h2>
+        <p>What was our cutest recent moment? ❤️</p>
+        <input id="memory" type="text" placeholder="Type your answer…" style="width:100%; padding:10px; border-radius:8px;">
+        <button onclick="next(2)">SUBMIT</button>
+    </div>
+
+    <!-- Level 2 -->
+    <div id="screen3" class="hidden">
+        <h2>LEVEL 2 — CHOOSE YOUR BOOST</h2>
+        <button onclick="next(3)">A — Cuddles +10 Comfort</button>
+        <button onclick="next(3)">B — Food Date +15 Happiness</button>
+        <button onclick="next(3)">C — Long Drive +20 Vibes</button>
+        <button onclick="next(3)">D — Movie Night +25 Cozy</button>
+    </div>
+
+    <!-- Level 3 -->
+    <div id="screen4" class="hidden">
+        <h2>FINAL LEVEL — HEART GATE ❤️</h2>
+        <button onclick="next(4)">Comfort</button>
+        <button onclick="next(4)">Magic</button>
+        <button onclick="next(4)">Love</button>
+        <button onclick="next(4)">Chaos</button>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="screen5" class="hidden">
+        <h1>🎉 MISSION COMPLETE</h1>
+        <h2>Will you be my Valentine? 💘</h2>
+        <button style="background:#ff0066; font-size:18px;">YES</button>
+        <button style="background:#ff0066; font-size:18px;">YES (no other option 😌)</button>
+    </div>
+
+</div>
+
+<script>
+function next(n) {
+    document.getElementById("screen" + n).classList.add("hidden");
+    document.getElementById("screen" + (n + 1)).classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
